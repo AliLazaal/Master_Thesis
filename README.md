@@ -35,8 +35,9 @@ System.Threading.Tasks.Extensions	4.5.4
 Make sure these packages are restored via NuGet before building the solution.
     
 3. Installation & Setup
+   
    i. Clone this repository:
-         git clone https://github.com/<your-username>/<repo-name>.git
+         git clone https://github.com/AliLazzal/Master_Thesis.git
 
    ii. Open the solution file Evaluation Tool for ENNA.sln in Visual Studio 2017 or later.
 
@@ -46,7 +47,7 @@ Make sure these packages are restored via NuGet before building the solution.
    iv. Configure the PostgreSQL database connection string in the application settings.
     v. Build and run the solution.
 
-4. Development Notes
+5. Development Notes
 
   This software is currently in the prototype phase.
 
