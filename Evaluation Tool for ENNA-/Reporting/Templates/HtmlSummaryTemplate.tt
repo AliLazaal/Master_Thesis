@@ -1,0 +1,90 @@
+﻿
+<#@ template language="C#" #>
+<#@ output extension=".html" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Evaluation_Tool_for_ENNA_.Reporting" #>
+<#@ import namespace="Evaluation_Tool_for_ENNA_.Enums" #>
+<#@ import namespace="DataModels" #>
+<#
+	List<Testcaselog> testresults = this.testresults.ToList();
+#>
+<html>
+<head>
+<style>
+table td + td { border-left:1px solid black; }
+table th + th { border-left:1px solid black; }
+th {border-bottom:1px solid black; padding-left: 5px; padding-right: 5px;}
+td {padding-left: 5px; padding-right: 5px;}
+table { border-collapse:collapse}
+</style>
+</head>
+
+<body>
+<h1>Summary Report</h1>
+
+<t>Test Name: <#= this.TestName#> </t>
+
+<h3>Overview</h3>
+<table>
+	<tr>
+		<th>Result</th>
+		<th>Count</th>
+		<th>Percentage</th>
+	</tr>
+	<tr>
+		<td>Passed</th>
+		<td style="text-align:end;"><#=this.passed_count#></th>
+		<td style="text-align:end;"><#=this.passed_percentage#></th>
+	</tr>
+	<tr>
+		<td>Failed</th>
+		<td style="text-align:end;"><#=this.failed_count#></th>
+		<td style="text-align:end;"><#=this.failed_percentage#></th>
+	</tr>
+	<tr>
+		<td>Open</th>
+		<td style="text-align:end;"><#=this.open_count#></th>
+		<td style="text-align:end;"><#=this.open_percentage#></th>
+	</tr>
+	<tr style="border-top:1px solid black; font-weight: bold">
+		<td>Total</th>
+		<td style="text-align:end;"><#=this.testcase_count#></th>
+		<td style="text-align:end;">100%</th>
+	</tr>
+
+</table>
+
+<h3>Testcases</h3>
+
+<table>
+	<tr>
+		<th>Test Id</th>
+		<th>Ecu</th>
+		<th>Req Id</th>
+		<th>Test Result</th>	
+		<th>Testcase Name</th>			
+	</tr>
+<# for (int i=0;i<testresults.Count();i++)
+	{
+		//var result = testresults[i].Result;
+		if (i % 2 == 0){ #>
+		<tr>
+<#		}
+		else{ #>
+		<tr style="background-color:lightgrey">
+<#		} #>
+		<td><#=testresults[i].TCId#></td>
+		<td><#=testresults[i].ECUNo#></td>
+		<td><#=testresults[i].ReqId#></td>
+
+		<td><#=testresults[i].CaseName#></td>
+	</tr>
+<#	} #>
+
+
+</table>
+</body>
+</html>

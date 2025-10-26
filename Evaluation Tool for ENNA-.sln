@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 15 for Windows Desktop
+VisualStudioVersion = 15.0.28307.1684
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation Tool for ENNA-", "Evaluation Tool for ENNA-\Evaluation Tool for ENNA-.csproj", "{F1173643-B636-4C5C-A66C-6498582BD579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAccess", "Databaseaccess\DatabaseAccess.csproj", "{661F2C0B-9C5B-49DF-B604-1539C4134881}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1173643-B636-4C5C-A66C-6498582BD579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1173643-B636-4C5C-A66C-6498582BD579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1173643-B636-4C5C-A66C-6498582BD579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1173643-B636-4C5C-A66C-6498582BD579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661F2C0B-9C5B-49DF-B604-1539C4134881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661F2C0B-9C5B-49DF-B604-1539C4134881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661F2C0B-9C5B-49DF-B604-1539C4134881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661F2C0B-9C5B-49DF-B604-1539C4134881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {512A75E3-E549-43E8-940A-775E4CF7DF11}
+	EndGlobalSection
+EndGlobal
